@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "QueueLess"
+description = "A virtual queue app for local businesses: customers join by QR code and staff call the next person while everyone sees live queue updates."
+version = "1.0.0"
+id = "artifacts/queueless"
+router = "path"
+
+[[services]]
+name = "web"
+paths = ["/", "/api"]
+localPort = 21436
+
+[services.development]
+run = "uv run --project ../.. gunicorn --reload --bind 0.0.0.0:21436 app:app"
+
+[services.production.build]
+args = ["uv", "sync", "--no-dev", "--project", "."]
+
+[services.production.run]
+args = ["uv", "run", "--no-sync", "--project", ".", "gunicorn", "--workers", "1", "--bind", "0.0.0.0:8080", "--chdir", "artifacts/queueless", "app:app"]
+
+[services.production.run.env]
+PORT = "8080"
+
+[services.production.health.startup]
+path = "/"
+
+[services.env]
+PORT = "21436"
+BASE_PATH = "/"

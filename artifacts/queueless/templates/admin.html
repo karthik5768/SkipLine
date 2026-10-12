@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f2f7fc">
+    <title>Queue dashboard — QueueLess</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body class="admin-page">
+    <header class="admin-topbar">
+      <a class="brand-link" href="{{ url_for('home') }}"><span class="brand-dot">Q</span> QueueLess</a>
+      <a class="text-link" href="{{ url_for('qr_page') }}">Show QR code <span aria-hidden="true">↗</span></a>
+    </header>
+    <main class="admin-shell">
+      <div class="page-heading">
+        <div>
+          <p class="eyebrow">Counter dashboard</p>
+          <h1>Queue overview</h1>
+        </div>
+        <span class="live-badge"><span class="live-dot"></span> Live</span>
+      </div>
+      <section class="admin-summary" aria-live="polite">
+        <div class="summary-card serving-card">
+          <span class="summary-label">Now serving</span>
+          <strong id="admin-now-serving" class="summary-number">#—</strong>
+          <span id="admin-current-name" class="summary-caption">No one at the counter</span>
+        </div>
+        <div class="summary-card">
+          <span class="summary-label">Avg service time</span>
+          <strong id="admin-average" class="summary-number">3 min</strong>
+          <span id="admin-learning" class="summary-caption">Learning estimate · default 3 min</span>
+        </div>
+      </section>
+
+      <section class="waiting-card">
+        <div class="waiting-heading">
+          <div>
+            <h2>Waiting</h2>
+            <p class="muted"><span id="waiting-count">0</span> people in line</p>
+          </div>
+          <span class="refresh-note">Updates every 2 seconds</span>
+        </div>
+        <p id="admin-error" class="form-error" role="status"></p>
+        <ul id="waiting-list" class="waiting-list"></ul>
+        <div id="empty-queue" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">✓</div>
+          <strong>All clear</strong>
+          <span>No one is waiting right now.</span>
+        </div>
+      </section>
+
+      <div class="admin-actions">
+        <button id="call-next" class="button button-primary button-large" type="button">Call Next <span aria-hidden="true">→</span></button>
+        <button id="reset-queue" class="button button-quiet" type="button">Reset Queue</button>
+      </div>
+    </main>
+    <footer class="site-footer">QueueLess - Skip the wait.</footer>
+    <script src="{{ url_for('static', filename='admin.js') }}" defer></script>
+  </body>
+</html>

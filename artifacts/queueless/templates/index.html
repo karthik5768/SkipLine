@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f2f7fc">
+    <meta name="description" content="Join a virtual queue and know exactly when it's your turn.">
+    <title>QueueLess — Skip the wait</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <main class="landing-shell">
+      <div class="brand-mark" aria-hidden="true"><span>Q</span></div>
+      <p class="eyebrow">A calmer way to wait</p>
+      <h1 class="landing-title">Queue<span>Less</span></h1>
+      <p class="landing-pitch">Join the line from your phone. Get on with your day.</p>
+      <div class="landing-actions">
+        <a class="button button-primary button-large" href="{{ url_for('join_page') }}">Join Queue <span aria-hidden="true">→</span></a>
+        <a class="button button-secondary button-large" href="{{ url_for('admin_page') }}">Admin</a>
+      </div>
+      <p class="landing-note">No app to download. Just your place in line.</p>
+    </main>
+    <footer class="site-footer">QueueLess - Skip the wait.</footer>
+  </body>
+</html>

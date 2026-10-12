@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f2f7fc">
+    <title>Join the queue — QueueLess</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body class="customer-page">
+    <main class="customer-shell" id="customer-screen">
+      <a class="brand-link" href="{{ url_for('home') }}"><span class="brand-dot">Q</span> QueueLess</a>
+
+      <section class="customer-card" aria-live="polite">
+        <div id="join-form-view">
+          <p class="eyebrow">Your place, without the wait</p>
+          <h1>Join the queue</h1>
+          <p class="muted intro-copy">Add your name and keep your place while you wait.</p>
+          <form id="join-form">
+            <label for="customer-name">Your name</label>
+            <input id="customer-name" name="name" type="text" maxlength="60" autocomplete="name" placeholder="e.g. Asha" required>
+            <p id="join-error" class="form-error" role="alert"></p>
+            <button id="join-button" class="button button-primary button-large full-width" type="submit">Join Queue</button>
+          </form>
+        </div>
+
+        <div id="ticket-view" class="ticket-view" hidden>
+          <div id="ticket-status-pill" class="status-pill">In the queue</div>
+          <p id="your-turn-heading" class="turn-heading" hidden>It's your turn!</p>
+          <p class="eyebrow ticket-label">Your place in line</p>
+          <h1 class="token-heading">Your token: <span id="ticket-token">#—</span></h1>
+          <div class="queue-stats">
+            <div class="queue-stat">
+              <span id="people-ahead" class="queue-stat-value">—</span>
+              <span class="queue-stat-label">people ahead</span>
+            </div>
+            <div class="queue-stat">
+              <span id="wait-time" class="queue-stat-value">~— min</span>
+              <span class="queue-stat-label">estimated wait</span>
+            </div>
+          </div>
+          <div class="serving-line">Now serving: <strong id="now-serving">#—</strong></div>
+          <p id="ticket-message" class="ticket-message">Stay nearby. This page updates automatically.</p>
+        </div>
+        <p id="connection-error" class="form-error connection-error" role="status"></p>
+      </section>
+      <a class="back-link" href="{{ url_for('home') }}">← Back to QueueLess</a>
+    </main>
+    <footer class="site-footer">QueueLess - Skip the wait.</footer>
+    <script src="{{ url_for('static', filename='join.js') }}" defer></script>
+  </body>
+</html>
