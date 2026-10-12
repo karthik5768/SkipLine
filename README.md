@@ -25,4 +25,4 @@ The same pattern works everywhere: a queue, a counter and a phone, from clinics 
 
 ## Social impact
 
-Skipline saves time for the elderly, daily-wage workers and patients.
+Skipline saves time for the elderly, daily wage workers and patients.
