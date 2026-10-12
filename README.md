@@ -11,10 +11,6 @@ Waiting in a line can take time away from work, rest, and family. Skipline lets 
 
 Queue data is held in memory and clears if the server restarts or staff reset the queue.
 
-## Live URL
-
-Not published yet. Publish Skipline from Replit to create its public URL; the QR page automatically uses the address it is opened from.
-
 ## Who pays
 
 Businesses pay Rs 499/month per counter, while hospitals and offices pay a flat annual fee.
