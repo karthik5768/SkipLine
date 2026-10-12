@@ -21,6 +21,14 @@
             <label for="customer-name">Your name</label>
             <input id="customer-name" name="name" type="text" maxlength="60" autocomplete="name" placeholder="e.g. Asha" required>
             <p id="join-error" class="form-error" role="alert"></p>
+            <div class="demo-captcha">
+              <label class="demo-captcha-label" for="robot-check">
+                <input id="robot-check" class="demo-captcha-checkbox" name="robot-check" type="checkbox" required>
+                <span>I'm not a robot</span>
+              </label>
+              <span class="demo-captcha-badge" aria-hidden="true">DEMO</span>
+            </div>
+            <p class="captcha-note">Demo only — this checkbox is not real bot protection.</p>
             <button id="join-button" class="button button-primary button-large full-width" type="submit">Join Queue</button>
           </form>
         </div>

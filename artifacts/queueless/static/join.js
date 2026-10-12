@@ -4,6 +4,7 @@
   const formView = document.getElementById("join-form-view");
   const form = document.getElementById("join-form");
   const nameInput = document.getElementById("customer-name");
+  const robotCheck = document.getElementById("robot-check");
   const joinButton = document.getElementById("join-button");
   const joinError = document.getElementById("join-error");
   const ticketView = document.getElementById("ticket-view");
@@ -89,6 +90,10 @@
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     joinError.textContent = "";
+    if (!robotCheck.checked) {
+      robotCheck.reportValidity();
+      return;
+    }
     joinButton.disabled = true;
     joinButton.textContent = "Joining…";
     try {
