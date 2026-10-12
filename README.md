@@ -1,6 +1,6 @@
-# QueueLess
+# Skipline
 
-Waiting in a line can take time away from work, rest, and family. QueueLess lets people join from a QR code and see their place while staff call the next person.
+Waiting in a line can take time away from work, rest, and family. Skipline lets people join from a QR code and see their place while staff call the next person.
 
 ## How to run
 
@@ -13,7 +13,7 @@ Queue data is held in memory and clears if the server restarts or staff reset th
 
 ## Live URL
 
-Not published yet. Publish QueueLess from Replit to create its public URL; the QR page automatically uses the address it is opened from.
+Not published yet. Publish Skipline from Replit to create its public URL; the QR page automatically uses the address it is opened from.
 
 ## Who pays
 
@@ -29,4 +29,4 @@ The same pattern works everywhere: a queue, a counter and a phone, from clinics 
 
 ## Social impact
 
-QueueLess saves time for the elderly, daily-wage workers and patients.
+Skipline saves time for the elderly, daily-wage workers and patients.

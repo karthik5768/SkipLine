@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "QueueLess"
+title = "Skipline"
 description = "A virtual queue app for local businesses: customers join by QR code and staff call the next person while everyone sees live queue updates."
 version = "1.0.0"
 id = "artifacts/queueless"

@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f2f7fc">
-    <title>Scan to join — QueueLess</title>
+    <title>Scan to join — Skipline</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   </head>
   <body class="qr-page">
     <main class="qr-shell">
-      <a class="brand-link" href="{{ url_for('home') }}"><span class="brand-dot">Q</span> QueueLess</a>
+      <a class="brand-link" href="{{ url_for('home') }}"><span class="brand-dot">S</span> Skipline</a>
       <section class="qr-card">
         <p class="eyebrow">Your time matters</p>
         <h1>Scan to join the queue</h1>
         <p class="muted qr-copy">Point your phone camera at the code to take your place in line.</p>
         <div class="qr-frame">
-          <img src="data:image/png;base64,{{ qr_data }}" alt="QR code linking to the QueueLess join page">
+          <img src="data:image/png;base64,{{ qr_data }}" alt="QR code linking to the Skipline join page">
         </div>
         <p class="qr-url">{{ join_url }}</p>
         <a class="text-link" href="{{ url_for('admin_page') }}">Back to the counter dashboard →</a>
       </section>
     </main>
-    <footer class="site-footer">QueueLess - Skip the wait.</footer>
+    <footer class="site-footer">Skipline - Skip the wait.</footer>
   </body>
 </html>

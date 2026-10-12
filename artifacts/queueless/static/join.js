@@ -1,5 +1,6 @@
 (() => {
-  const STORAGE_KEY = "queueless-ticket-id";
+  const STORAGE_KEY = "skipline-ticket-id";
+  const LEGACY_STORAGE_KEY = "queueless-ticket-id";
   const formView = document.getElementById("join-form-view");
   const form = document.getElementById("join-form");
   const nameInput = document.getElementById("customer-name");
@@ -15,6 +16,11 @@
   const nowServing = document.getElementById("now-serving");
   const message = document.getElementById("ticket-message");
   let ticketId = localStorage.getItem(STORAGE_KEY);
+  if (!ticketId) {
+    ticketId = localStorage.getItem(LEGACY_STORAGE_KEY);
+    if (ticketId) localStorage.setItem(STORAGE_KEY, ticketId);
+  }
+  localStorage.removeItem(LEGACY_STORAGE_KEY);
   let previousState = null;
   let requestInFlight = false;
 
@@ -45,7 +51,7 @@
       turnHeading.hidden = true;
       statusPill.textContent = "Served";
       statusPill.classList.remove("status-pill-turn");
-      message.textContent = "You have been served. Thank you for using QueueLess.";
+      message.textContent = "You have been served. Thank you for using Skipline.";
     } else {
       document.body.classList.remove("turn-screen");
       turnHeading.hidden = true;

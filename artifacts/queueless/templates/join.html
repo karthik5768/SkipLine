@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f2f7fc">
-    <title>Join the queue — QueueLess</title>
+    <title>Join the queue — Skipline</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
   </head>
   <body class="customer-page">
     <main class="customer-shell" id="customer-screen">
-      <a class="brand-link" href="{{ url_for('home') }}"><span class="brand-dot">Q</span> QueueLess</a>
+      <a class="brand-link" href="{{ url_for('home') }}"><span class="brand-dot">S</span> Skipline</a>
 
       <section class="customer-card" aria-live="polite">
         <div id="join-form-view">
@@ -45,9 +45,9 @@
         </div>
         <p id="connection-error" class="form-error connection-error" role="status"></p>
       </section>
-      <a class="back-link" href="{{ url_for('home') }}">← Back to QueueLess</a>
+      <a class="back-link" href="{{ url_for('home') }}">← Back to Skipline</a>
     </main>
-    <footer class="site-footer">QueueLess - Skip the wait.</footer>
+    <footer class="site-footer">Skipline - Skip the wait.</footer>
     <script src="{{ url_for('static', filename='join.js') }}" defer></script>
   </body>
 </html>
