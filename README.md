@@ -1,4 +1,4 @@
-# Skipline
+# Skipline:
 
 Waiting in a line can take time away from work, rest, and family. Skipline lets people join from a QR code and see their place while staff call the next person.
 
